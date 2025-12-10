@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Models/" />
+  <Project Path="Bits.Data/Bits.Data.csproj" Id="d992c4bb-f47a-45b0-a8b2-05f431238fc1" />
+  <Project Path="Bits.Tests/Bits.Tests.csproj" Id="5c783450-aaf6-49e5-95af-7006a497ac79" />
+  <Project Path="BITSProject/BITSProject.csproj" Id="01868037-2b30-4268-a20b-267807d7c715" />
+</Solution>
