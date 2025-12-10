@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>BITS – Browse Recipes</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="app-header">
+        <h1>BITS – Browse Recipes</h1>
+        <div class="search-area">
+            <label for="searchBox">Search:</label>
+            <input id="searchBox" type="text" placeholder="Search by recipe name..." />
+            <button type="button">Go</button>
+        </div>
+    </header>
+
+    <main class="layout">
+        <!-- Left filter pane -->
+        <section class="filters">
+            <h2>Filters</h2>
+
+            <div class="filter-group">
+                <label for="styleFilter">Style</label>
+                <select id="styleFilter">
+                    <option value="">All Styles</option>
+                    <option>IPA</option>
+                    <option>Stout</option>
+                    <option>Lager</option>
+                    <option>Specialty</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="abvMin">ABV Range</label>
+                <div class="range-row">
+                    <input id="abvMin" type="number" placeholder="Min %" />
+                    <span>to</span>
+                    <input id="abvMax" type="number" placeholder="Max %" />
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="batchSize">Batch Size</label>
+                <select id="batchSize">
+                    <option value="">Any</option>
+                    <option>1 BBL</option>
+                    <option>3 BBL</option>
+                    <option>7 BBL</option>
+                </select>
+            </div>
+
+            <button type="button" class="primary-btn">Apply Filters</button>
+            <button type="button" class="secondary-btn">Clear</button>
+        </section>
+
+        <!-- Middle recipe list -->
+        <section class="recipe-list">
+            <h2>Recipe List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Recipe ID</th>
+                        <th>Name</th>
+                        <th>Style</th>
+                        <th>ABV</th>
+                        <th>IBU</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample rows – these match your API data style -->
+                    <tr>
+                        <td>2</td>
+                        <td>Krampus' Special Sauce</td>
+                        <td>Specialty</td>
+                        <td>7.5%</td>
+                        <td>35</td>
+                        <td><button type="button">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Summer Citrus Pale Ale</td>
+                        <td>Pale Ale</td>
+                        <td>5.2%</td>
+                        <td>28</td>
+                        <td><button type="button">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Dark Night Stout</td>
+                        <td>Stout</td>
+                        <td>6.8%</td>
+                        <td>45</td>
+                        <td><button type="button">View Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Right recipe details panel -->
+        <aside class="recipe-details">
+            <h2>Recipe Details</h2>
+
+            <div class="detail-field">
+                <label>Name</label>
+                <div class="value">Krampus' Special Sauce</div>
+            </div>
+
+            <div class="detail-field">
+                <label>Style</label>
+                <div class="value">Specialty</div>
+            </div>
+
+            <div class="detail-field">
+                <label>ABV / IBU</label>
+                <div class="value">7.5% / 35 IBU</div>
+            </div>
+
+            <div class="detail-field">
+                <label>Batch Size</label>
+                <div class="value">3 BBL</div>
+            </div>
+
+            <div class="detail-field">
+                <label>Notes</label>
+                <div class="value">
+                    Spiced holiday ale with citrus peel, ginger, and cinnamon stick.
+                </div>
+            </div>
+
+            <h3>Ingredients</h3>
+            <ul class="ingredient-list">
+                <li>Fuggle, U.S. – 1.0 lb</li>
+                <li>Ginger, Crystallized – 0.5 lb</li>
+                <li>Fennel Seed – 0.25 lb</li>
+                <li>Orange Peel, Bitter – 0.25 lb</li>
+                <li>Orange Peel, Sweet – 0.25 lb</li>
+                <li>Cinnamon Stick – 5 sticks</li>
+            </ul>
+
+            <div class="details-actions">
+                <button type="button" class="primary-btn">Edit Recipe</button>
+                <button type="button" class="secondary-btn">Close</button>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
